@@ -5,6 +5,14 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## Unreleased
 
+## 0.2.0 - 2020-05-20
+
+### Added
+
+  - First successful case greeting the user.
+  - React and TypeScript project scaffolding.
+  - Docker and docker-compose configuration for building, deploying and testing.
+
 ## 0.1.0 - 2020-05-20
 
 ### Added
