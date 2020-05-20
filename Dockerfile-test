@@ -1,0 +1,8 @@
+FROM cypress/base:12.16.0
+ADD ./build /workspace/build
+ADD ./cypress /workspace/cypress
+COPY ./cypress.json /workspace/cypress.json
+WORKDIR /workspace
+RUN npm install -g onchange cypress
+RUN cypress verify
+CMD onchange -i -k './cypress/integration' './build' -- cypress run

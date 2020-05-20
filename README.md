@@ -1,7 +1,7 @@
 # react-similarity-network
 
 A similarity graph for Foursquare places. Crawls through venue connections,
-recursively drawing links between their them and their peers.
+recursively drawing links between them and their peers.
 
 ## Installation
 

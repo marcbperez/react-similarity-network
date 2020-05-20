@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+
+  build:
+    build: .
+    volumes:
+      - .:/workspace
+    ports:
+      - "3000:3000"
+    environment:
+      - CI=true
+
+  deploy:
+    build:
+      context: .
+      dockerfile: Dockerfile-deploy
+    volumes:
+      - ./build:/usr/share/nginx/html
+    ports:
+      - "8000:80"
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile-test
+    volumes:
+      - ./build:/workspace/build
+      - ./cypress:/workspace/cypress
+    environment:
+      - CI=true
+      - CYPRESS_BASEURL=http://deploy
