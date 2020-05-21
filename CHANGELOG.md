@@ -5,6 +5,14 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## Unreleased
 
+## 0.3.0 - 2020-05-21
+
+### Added
+
+  - Search form with results list to select the seed venue.
+  - Venue entity and search service.
+  - API error handling.
+
 ## 0.2.0 - 2020-05-20
 
 ### Added
