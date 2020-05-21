@@ -5,3 +5,7 @@
 .App h1 {
   font-size: 1.5em;
 }
+
+.App p {
+  color: red;
+}

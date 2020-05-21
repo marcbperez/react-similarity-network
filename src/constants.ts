@@ -1,1 +1,16 @@
-export const TITLE: string = 'Similarity Network';
+export const TITLE: string = 'Similarity Graph';
+export const ERROR: string = 'Something went wrong, please try again later.';
+export const APIBASEURL: string = 'https://api.foursquare.com/v2/venues';
+export const APIVERSION: string = '20200226';
+export const APISEARCHNEAR: string = 'London';
+export const FORMTESTID: string = 'Form';
+export const INPUTTYPE: string = 'text';
+export const CLIENTIDNAME: string = 'clientId';
+export const CLIENTIDPLACEHOLDER: string = 'Client ID';
+export const CLIENTIDTYPE: string = 'password';
+export const CLIENTSECRETNAME: string = 'clientSecret';
+export const CLIENTSECRETPLACEHOLDER: string = 'Client Secret';
+export const CLIENTSECRETTYPE: string = 'password';
+export const QUERYNAME: string = 'query';
+export const QUERYPLACEHOLDER: string = 'Query';
+export const SUBMITBUTTON: string = 'Search';
