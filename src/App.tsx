@@ -47,8 +47,8 @@ const App = (props: Props) => {
 }
 
 App.defaultProps = {
-  clientId: 'GYEYQKXD2FV1QEIOZKEI0M3MUXRID1OWGJS5Z0JSRJYDMT0X',
-  clientSecret: 'YGUU11DLLKJK3DUVNGUK03OXT11WROWEDO0MTE225N5DL5GP',
+  clientId: '',
+  clientSecret: '',
   items: []
 };
 
