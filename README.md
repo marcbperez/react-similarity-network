@@ -3,6 +3,8 @@
 Similarity graph for Foursquare places. Crawls through venue connections,
 recursively drawing links between them and their peers.
 
+![screenshot](media/screenshot.png)
+
 ## Installation
 
 After cloning the sources you can choose to run the pipeline in Docker
