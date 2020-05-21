@@ -30,7 +30,7 @@ services:
     environment:
       - CI=true
       - CYPRESS_BASEURL=http://deploy
-      - CYPRESS_CLIENTID=
-      - CYPRESS_CLIENTSECRET=
       - CYPRESS_QUERY=piccadilly
       - CYPRESS_RESULT=Piccadilly Circus
+      - CYPRESS_CLIENTID=
+      - CYPRESS_CLIENTSECRET=
