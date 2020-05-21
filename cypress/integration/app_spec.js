@@ -1,4 +1,4 @@
-describe('Similarity Graph', () => {
+describe('Similarity Network', () => {
   beforeEach(() => {
     cy.visit(Cypress.env('BASEURL'))
   })
