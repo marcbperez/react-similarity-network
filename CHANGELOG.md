@@ -5,6 +5,8 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## Unreleased
 
+## 0.3.0 - 2020-05-21
+
 ### Added
 
   - Search form with results list to select the seed venue.
