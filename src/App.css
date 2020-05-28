@@ -9,3 +9,17 @@
 .App p {
   color: red;
 }
+
+.App ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.App button {
+  margin-top: 1em;
+}
+
+.App svg {
+  width: 99vw;
+  height: 99vh;
+}

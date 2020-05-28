@@ -5,7 +5,7 @@ import { APIBASEURL, APIVERSION } from '../constants';
 /**
  * Retrieves a list of similar venues given a venue ID.
  */
-export default class Similars {
+export default class VenueSimilars {
   baseUrl: string;
   version: string;
 
@@ -18,7 +18,7 @@ export default class Similars {
   }
 
   /**
-   * Return a formed URL to search for similar venues.
+   * Returns the complete URL.
    */
   url(clientId: string, clientSecret: string, venueId: string): string {
     const { baseUrl, version } = this;
@@ -35,7 +35,7 @@ export default class Similars {
   }
 
   /**
-   * Get the list of similar venues.
+   * Gets the list of similar venues.
    */
   get(
     clientId: string, clientSecret: string, venueId: string

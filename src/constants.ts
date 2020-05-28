@@ -27,3 +27,4 @@ export const NODESTROKECOLOR: string = 'white';
 export const NODESTROKEWIDTH: number = 1.5;
 export const NODESTROKEOPACITY: number = 1.0;
 export const NODERADIUS: number = 5;
+export const SPACEKEY: string = ' ';

@@ -3,9 +3,12 @@ import Venue from '../Venue/Venue';
 
 interface Props {
   items: Venue[],
-  onClick: (e: any, item: Venue) => void
+  onClick: (event: any, item: Venue) => void
 }
 
+/**
+ * Shows a list of links with a custom click behaviour.
+ */
 const Results = (props: Props) => {
   const { items, onClick } = props;
 
@@ -13,7 +16,9 @@ const Results = (props: Props) => {
     <ul>
       { items.map((item: Venue) =>
         <li key={item.id}>
-          <a href='/' onClick={(e: any) => onClick(e, item)}>{item.name}</a>
+          <a href='/' onClick={(event: any) => onClick(event, item)}>
+            {item.name}
+          </a>
         </li>
       )}
     </ul>
@@ -22,7 +27,7 @@ const Results = (props: Props) => {
 
 Results.defaultProps = {
   items: [],
-  onClick: (e: any, item: Venue) => {}
+  onClick: (event: any, item: Venue) => {}
 };
 
 export default Results;
