@@ -1,9 +1,4 @@
-import React, { useState } from 'react';
-import Venue from '../Venue/Venue';
-import Search from '../Venue/Search';
-import Input from './Input';
-import Results from './Results';
-import './Form.css';
+import React from 'react';
 import {
   FORMTESTID,
   CLIENTIDTYPE,
@@ -16,12 +11,17 @@ import {
   QUERYPLACEHOLDER,
   SUBMITBUTTON
 } from '../constants';
+import { Items } from '../hooks';
+import Input from '../Input/Input';
+import Results from '../Results/Results';
+import Venue from '../Venue/Venue';
+import VenueSearch from '../Venue/VenueSearch';
 
 interface Props {
   clientId: string,
   clientSecret: string,
   query: string,
-  search: Search,
+  venueSearch: VenueSearch,
   items: Venue[],
   setClientId: (clientId: string) => void,
   setClientSecret: (clientSecret: string) => void,
@@ -29,71 +29,85 @@ interface Props {
   setError: (error: boolean) => void
 }
 
+/**
+ * Search form that obtains a list of venues meant to be used as graph seeds.
+ */
 const Form = (props: Props) => {
   const {
     clientId,
     clientSecret,
     query,
-    search,
+    venueSearch,
     setClientId,
     setClientSecret,
     setResult,
     setError
   } = props;
 
-  // Search results shown in the list after a query.
-  const [items, setItems] = useState<Venue[]>(props.items);
+  // Result collection to be displayed as possible seed venues.
+  const [items, setItems] = Items(props.items);
 
-  // Form submit action.
-  const onSubmit = (e: any) => {
-    e.preventDefault();
+  // An event catcher to handle the results from loading the venue search,
+  // making them available on the list.
+  const onSuccess = (
+    clientId: string,
+    clientSecret: string,
+    items: Venue[]
+  ) => {
+    setClientId(clientId);
+    setClientSecret(clientSecret);
+    setItems(items);
+    setError(false);
+  };
 
-    const data: FormData = new FormData(e.target);
+  // An event catcher for response errors that resets the result list and shows
+  // an error message.
+  const onError = () => {
+    setItems([]);
+    setError(true);
+  };
+
+  // An event catcher to read the form when sent, that shows the search results,
+  // or an error message if something goes wrong.
+  const onSubmit = (event: any) => {
+    event.preventDefault();
+    // Get the API authentication details and the query to search for.
+    const data: FormData = new FormData(event.target);
     const clientId: string = String(data.get(CLIENTIDNAME));
     const clientSecret: string = String(data.get(CLIENTSECRETNAME));
     const query: string = String(data.get(QUERYNAME));
-
-    // Search for places and set the client ID, client secret and items so that
-    // the graph can render.
-    search.get(clientId, clientSecret, query).then((items: Venue[]) => {
-      setClientId(clientId);
-      setClientSecret(clientSecret);
-      setItems(items);
-
-      setError(false);
-    }).catch((error: any) => {
-      setItems([]);
-      setError(true);
-    });
+    // Search for venues given the query contents as venue name.
+    venueSearch
+      .get(clientId, clientSecret, query)
+      .then((items: Venue[]) => onSuccess(clientId, clientSecret, items))
+      .catch((error: any) => onError());
   };
 
-  // Sets the new graph seed when clicking on a result from the list.
-  const onClick = (e: any, result: Venue) => {
-    e.preventDefault();
+  // An event catcher for the list item click, to set it as seed venue.
+  const onClick = (event: any, result: Venue) => {
+    event.preventDefault();
     setResult(result);
   };
 
   return (
-    <form className={FORMTESTID} data-testid={FORMTESTID} onSubmit={onSubmit}>
-      {/* Client ID field. */}
+    <form data-testid={FORMTESTID} onSubmit={onSubmit}>
       <Input
         name={CLIENTIDNAME}
         placeholder={CLIENTIDPLACEHOLDER}
         type={CLIENTIDTYPE}
         defaultValue={clientId} />
-      {/* Client secret field. */}
       <Input
         name={CLIENTSECRETNAME}
         placeholder={CLIENTSECRETPLACEHOLDER}
         type={CLIENTSECRETTYPE}
         defaultValue={clientSecret} />
-      {/* Search query field. */}
       <Input
         placeholder={QUERYPLACEHOLDER}
         name={QUERYNAME}
         defaultValue={query} />
-      {/* Form submit and results list. */}
       <button>{SUBMITBUTTON}</button>
+
+      {/* List to show the search results in. */}
       <Results items={items} onClick={onClick} />
     </form>
   );
@@ -103,7 +117,7 @@ Form.defaultProps = {
   clientId: '',
   clientSecret: '',
   query: '',
-  search: new Search(),
+  venueSearch: new VenueSearch(),
   items: [],
   setClientId: (clientId: string) => {},
   setClientSecret: (clientSecret: string) => {},

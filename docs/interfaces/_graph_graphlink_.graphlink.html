@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Props | react-similarity-network</title>
+	<title>GraphLink | react-similarity-network</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,24 +56,36 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_graph_graph_.html">&quot;Graph/Graph&quot;</a>
+					<a href="../modules/_graph_graphlink_.html">&quot;Graph/GraphLink&quot;</a>
 				</li>
 				<li>
-					<a href="_graph_graph_.props.html">Props</a>
+					<a href="_graph_graphlink_.graphlink.html">GraphLink</a>
 				</li>
 			</ul>
-			<h1>Interface Props</h1>
+			<h1>Interface GraphLink</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Link between venues to use in the graph.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Props</span>
+						<span class="tsd-signature-type">SimulationNodeDatum</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">GraphLink</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -81,111 +93,155 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_graph_graph_.props.html#clientid" class="tsd-kind-icon">client<wbr>Id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_graph_graph_.props.html#clientsecret" class="tsd-kind-icon">client<wbr>Secret</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_graph_graph_.props.html#items" class="tsd-kind-icon">items</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_graph_graph_.props.html#seterror" class="tsd-kind-icon">set<wbr>Error</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_graph_graph_.props.html#setitems" class="tsd-kind-icon">set<wbr>Items</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_graph_graphlink_.graphlink.html#fx" class="tsd-kind-icon">fx</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_graph_graphlink_.graphlink.html#fy" class="tsd-kind-icon">fy</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_graph_graphlink_.graphlink.html#index" class="tsd-kind-icon">index</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_graph_graphlink_.graphlink.html#source" class="tsd-kind-icon">source</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_graph_graphlink_.graphlink.html#target" class="tsd-kind-icon">target</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_graph_graphlink_.graphlink.html#vx" class="tsd-kind-icon">vx</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_graph_graphlink_.graphlink.html#vy" class="tsd-kind-icon">vy</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_graph_graphlink_.graphlink.html#x" class="tsd-kind-icon">x</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_graph_graphlink_.graphlink.html#y" class="tsd-kind-icon">y</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="clientid" class="tsd-anchor"></a>
-					<h3>client<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">client<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="fx" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> fx</h3>
+					<div class="tsd-signature tsd-kind-icon">fx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_venue_venue_.venue.html">Venue</a>.<a href="_venue_venue_.venue.html#fx">fx</a></p>
 						<ul>
-							<li>Defined in src/Graph/Graph.tsx:7</li>
+							<li>Defined in node_modules/@types/d3-force/index.d.ts:51</li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="clientsecret" class="tsd-anchor"></a>
-					<h3>client<wbr>Secret</h3>
-					<div class="tsd-signature tsd-kind-icon">client<wbr>Secret<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/Graph/Graph.tsx:8</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="items" class="tsd-anchor"></a>
-					<h3>items</h3>
-					<div class="tsd-signature tsd-kind-icon">items<span class="tsd-signature-symbol">:</span> <a href="_venue_venue_.venue.html" class="tsd-signature-type">Venue</a><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/Graph/Graph.tsx:9</li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="seterror" class="tsd-anchor"></a>
-					<h3>set<wbr>Error</h3>
-					<div class="tsd-signature tsd-kind-icon">set<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in src/Graph/Graph.tsx:11</li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>error<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>error: <span class="tsd-signature-type">boolean</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Node’s fixed x-position (if position was fixed)</p>
+						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a name="setitems" class="tsd-anchor"></a>
-					<h3>set<wbr>Items</h3>
-					<div class="tsd-signature tsd-kind-icon">set<wbr>Items<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="_venue_venue_.venue.html" class="tsd-signature-type">Venue</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="fy" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> fy</h3>
+					<div class="tsd-signature tsd-kind-icon">fy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="_venue_venue_.venue.html">Venue</a>.<a href="_venue_venue_.venue.html#fy">fy</a></p>
 						<ul>
-							<li>Defined in src/Graph/Graph.tsx:10</li>
+							<li>Defined in node_modules/@types/d3-force/index.d.ts:55</li>
 						</ul>
 					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="_venue_venue_.venue.html" class="tsd-signature-type">Venue</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5>items: <a href="_venue_venue_.venue.html" class="tsd-signature-type">Venue</a><span class="tsd-signature-symbol">[]</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-									</li>
-								</ul>
-							</li>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Node’s fixed y-position (if position was fixed)</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="index" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> index</h3>
+					<div class="tsd-signature tsd-kind-icon">index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_venue_venue_.venue.html">Venue</a>.<a href="_venue_venue_.venue.html#index">index</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/d3-force/index.d.ts:31</li>
 						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Node’s zero-based index into nodes array. This property is set during the initialization process of a simulation.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="source" class="tsd-anchor"></a>
+					<h3>source</h3>
+					<div class="tsd-signature tsd-kind-icon">source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/Graph/GraphLink.ts:7</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="target" class="tsd-anchor"></a>
+					<h3>target</h3>
+					<div class="tsd-signature tsd-kind-icon">target<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/Graph/GraphLink.ts:8</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="vx" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> vx</h3>
+					<div class="tsd-signature tsd-kind-icon">vx<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_venue_venue_.venue.html">Venue</a>.<a href="_venue_venue_.venue.html#vx">vx</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/d3-force/index.d.ts:43</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Node’s current x-velocity</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="vy" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> vy</h3>
+					<div class="tsd-signature tsd-kind-icon">vy<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_venue_venue_.venue.html">Venue</a>.<a href="_venue_venue_.venue.html#vy">vy</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/d3-force/index.d.ts:47</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Node’s current y-velocity</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="x" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> x</h3>
+					<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_venue_venue_.venue.html">Venue</a>.<a href="_venue_venue_.venue.html#x">x</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/d3-force/index.d.ts:35</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Node’s current x-position</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="y" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> y</h3>
+					<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_venue_venue_.venue.html">Venue</a>.<a href="_venue_venue_.venue.html#y">y</a></p>
+						<ul>
+							<li>Defined in node_modules/@types/d3-force/index.d.ts:39</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Node’s current y-position</p>
+						</div>
 					</div>
 				</section>
 			</section>
@@ -208,7 +264,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_form_form_test_.html">&quot;<wbr>Form/<wbr>Form.test&quot;</a>
 					</li>
-					<li class="current tsd-kind-external-module">
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_graph_graph_.html">&quot;<wbr>Graph/<wbr>Graph&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -217,7 +273,7 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_graph_graphhooks_.html">&quot;<wbr>Graph/<wbr>Graph<wbr>Hooks&quot;</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="../modules/_graph_graphlink_.html">&quot;<wbr>Graph/<wbr>Graph<wbr>Link&quot;</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -259,31 +315,40 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-						<a href="_graph_graph_.props.html" class="tsd-kind-icon">Props</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_graph_graphlink_.graphlink.html" class="tsd-kind-icon">Graph<wbr>Link</a>
 						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_graph_graph_.props.html#clientid" class="tsd-kind-icon">client<wbr>Id</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_graph_graphlink_.graphlink.html#fx" class="tsd-kind-icon">fx</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_graph_graph_.props.html#clientsecret" class="tsd-kind-icon">client<wbr>Secret</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_graph_graphlink_.graphlink.html#fy" class="tsd-kind-icon">fy</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_graph_graph_.props.html#items" class="tsd-kind-icon">items</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_graph_graphlink_.graphlink.html#index" class="tsd-kind-icon">index</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_graph_graph_.props.html#seterror" class="tsd-kind-icon">set<wbr>Error</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_graph_graphlink_.graphlink.html#source" class="tsd-kind-icon">source</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-								<a href="_graph_graph_.props.html#setitems" class="tsd-kind-icon">set<wbr>Items</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="_graph_graphlink_.graphlink.html#target" class="tsd-kind-icon">target</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_graph_graphlink_.graphlink.html#vx" class="tsd-kind-icon">vx</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_graph_graphlink_.graphlink.html#vy" class="tsd-kind-icon">vy</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_graph_graphlink_.graphlink.html#x" class="tsd-kind-icon">x</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+								<a href="_graph_graphlink_.graphlink.html#y" class="tsd-kind-icon">y</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="../modules/_graph_graph_.html#graph" class="tsd-kind-icon">Graph</a>
-					</li>
 				</ul>
 			</nav>
 		</div>

@@ -5,6 +5,12 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## Unreleased
 
+## 0.4.1 - 2020-05-28
+
+### Fixed
+
+  - Functionality separation and code comments.
+
 ## 0.4.0 - 2020-05-21
 
 ### Added
