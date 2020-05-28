@@ -5,7 +5,7 @@ import { APIBASEURL, APIVERSION, APISEARCHNEAR } from '../constants';
 /**
  * Searches for a list of venues given a name query.
  */
-export default class Search {
+export default class VenueSearch {
   baseUrl: string;
   version: string;
   near: string;
@@ -21,7 +21,7 @@ export default class Search {
   }
 
   /**
-   * Return a formed URL to search for venues.
+   * Returns the complete URL.
    */
   url(clientId: string, clientSecret: string, query: string): string {
     const { baseUrl, version, near } = this;
@@ -39,7 +39,7 @@ export default class Search {
   }
 
   /**
-   * Get the list of venues.
+   * Gets the list of venues.
    */
   get(
     clientId: string, clientSecret: string, query: string

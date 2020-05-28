@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
 import { TITLE, FORMTESTID, GRAPHTESTID } from './constants';
+import App from './App';
 
 test('shows a title and search form by default', () => {
   const { getByText, getByTestId } = render(<App />);

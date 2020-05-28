@@ -1,5 +1,5 @@
 import * as d3 from 'd3';
-import Venue from '../Venue/Venue';
+import GraphLink from './GraphLink';
 import {
   GRAPHWIDTH,
   GRAPHHEIGHT,
@@ -12,13 +12,12 @@ import {
   NODEFILL,
   NODERADIUS
 } from '../constants';
+import Venue from '../Venue/Venue';
 
-interface Link extends d3.SimulationNodeDatum {
-  source: string,
-  target: string
-}
-
-export default class Render {
+/**
+ * Renders a similarity network graph on an SVG element using D3.
+ */
+export default class GraphRender {
   /**
    * Renders the graph.
    */
@@ -31,7 +30,7 @@ export default class Render {
     // Reset the graph first.
     this.reset(element, width, height);
     // Generate links, and add the link and node groups.
-    const links: Link[] = this.nodeLinks(nodes);
+    const links: GraphLink[] = this.nodeLinks(nodes);
     const linkGroup: any = this.linkGroup(element, links)
     const nodeGroup: any = this.nodeGroup(element, nodes);
     // Start the simulation
@@ -52,7 +51,7 @@ export default class Render {
   /**
    * Adds, and returns, the link group.
    */
-  linkGroup(element: SVGSVGElement, links: Link[]): any {
+  linkGroup(element: SVGSVGElement, links: GraphLink[]): any {
     return d3.select(element)
       .append('g')
       .attr('stroke', LINKSTROKECOLOR)
@@ -85,7 +84,7 @@ export default class Render {
   /**
    * Creates and starts the simulation.
    */
-  simulate(nodes: Venue[], nodeGroup: any, links: Link[], linkGroup: any) {
+  simulate(nodes: Venue[], nodeGroup: any, links: GraphLink[], linkGroup: any) {
     const simulation = d3.forceSimulation(nodes)
       .force('link', d3.forceLink(links).id((d: any) => d.id))
       .force('charge', d3.forceManyBody())
@@ -107,8 +106,8 @@ export default class Render {
   /**
    * Returns a list of links given a set of nodes.
    */
-  nodeLinks(nodes: Venue[]): Link[] {
-    let links: Link[] = [];
+  nodeLinks(nodes: Venue[]): GraphLink[] {
+    let links: GraphLink[] = [];
     // Flatten the list of node links.
     nodes.forEach((item: Venue) => item.links.forEach((link: string) =>
       links.push({ source: item.id, target: link })

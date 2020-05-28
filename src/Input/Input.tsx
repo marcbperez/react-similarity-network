@@ -8,9 +8,21 @@ interface Props {
   defaultValue: string
 }
 
+/**
+ * Uncontrolled required input to be handled by the form data.
+ */
 const Input = (props: Props) => {
+  const { type, name, placeholder, defaultValue } = props;
+
   return (
-    <div><input required { ...props } /></div>
+    <div>
+      <input
+        type={type}
+        name={name}
+        placeholder={placeholder}
+        defaultValue={defaultValue}
+        required />
+    </div>
   );
 }
 
