@@ -92,7 +92,7 @@ export const Svg: SvgHook = (
     venueSimilars
       .get(clientId, clientSecret, current.id)
       .then((similars: Venue[]) => onSuccess(similars))
-      .catch((error: any) => onError);
+      .catch((error: any) => onError());
 
   }, [clientId, clientSecret, items, setItems, setError]);
 
