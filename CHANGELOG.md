@@ -5,6 +5,12 @@ project adheres to [Semantic Versioning](http://semver.org).
 
 ## Unreleased
 
+## 0.4.2 - 2020-06-01
+
+### Fixed
+
+  - Missing unit tests and full coverage.
+
 ## 0.4.1 - 2020-05-28
 
 ### Fixed
