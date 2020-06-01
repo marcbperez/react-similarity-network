@@ -28,3 +28,32 @@ export const NODESTROKEWIDTH: number = 1.5;
 export const NODESTROKEOPACITY: number = 1.0;
 export const NODERADIUS: number = 5;
 export const SPACEKEY: string = ' ';
+
+// Used for testing:
+// Space event and item collection with a seed venue.
+export const SPACEEVENT: any = { key: SPACEKEY, code: 'Space' };
+export const TESTITEMS: any = [{ id: '1', name: '1st', links: [] }];
+// Sample venue search response.
+export const TESTSEARCHDATA: any = {
+  data: {
+    response: {
+      venues: [
+        { id: '1', name: '1st' },
+        { id: '2', name: '2nd' }
+      ]
+    }
+  }
+};
+// Sample venue similars response.
+export const TESTSIMILARDATA: any = {
+  data: {
+    response: {
+      similarVenues: {
+        items: [
+          { id: '3', name: '3rd' },
+          { id: '4', name: '4th' }
+        ]
+      }
+    }
+  }
+};
